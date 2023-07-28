@@ -85,7 +85,7 @@ h6 {
   margin-top: 50px;
   margin-bottom: 30px;
   display: block;
-  width: 160px;
+  width: 200px;
   border: 0px solid #1a4585;
 }
 
@@ -707,6 +707,10 @@ section {
   padding: 0;
 }
 
+.redes-portfolio a {
+  font-size: 1.3em;
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -1104,6 +1108,10 @@ section {
 
 #footer .redes i {
   font-size: 1.2em;
+}
+
+#footer .redes p {
+  font-size: 0.9em;
 }
 
 #footer .copyright {
