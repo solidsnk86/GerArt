@@ -27,14 +27,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/alpha.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -50,10 +43,9 @@
         <img src="assets/img/hero-bg.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Ger Art</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-          <a href="#" class="github"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-facebook"></i></a>
+          <a href="#" id="instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" id="linkedIn" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" id="facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
         </div>
       </div>
 
@@ -62,7 +54,7 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
           <li><a href="#abouts" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Acerca</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Servicios</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Talleres</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -72,11 +64,11 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <video autoplay loop muted playsinline class="hero-video">
-      <source src="assets/img/portfolio/video-WalterWhite-drawing.mp4" type="video/mp4">
+      <source src="assets/img/portfolio/video-dark-Vader.mp4" type="video/mp4">
       <!-- Agrega aquí más formatos de video compatibles -->
     </video>
     <div class="hero-container" data-aos="fade-in">
-      <p><span class="typed" data-typed-items="Hola! Bienvenidos a Ger-Art ツ, Soy Gerardo un ilustrador tradicional, Espero que les guste mi portfolio"></span></p>
+      <p><span class="typed" data-typed-items="Hola! Bienvenidos a Ger-Art ツ, Soy ilustrador tradicional, me alegra mostrarles mi portfolio, Espero que disfruten de mi trabajo"></span></p>
     </div>
   </section><!-- Fin de Hero -->
   
@@ -159,7 +151,7 @@
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="count-box">
-              <i class="bi bi-bar-chart"></i>
+              <i class="bi bi-clock"></i>
               <span data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Años dibujando</strong></p>
             </div>
@@ -175,7 +167,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Portafolio</h2>
+          <h2>Portfolio</h2>
           <p>Puedes ver mi portafolio aquí.</p>
         </div>
 
@@ -355,6 +347,19 @@
           </a>
 
         </div>
+
+        <div class="hr-container">
+          <hr />
+          <h4 class="fst-italic">Compartir</h4>
+          <hr />
+        </div>
+
+        <div class="redes">
+          <button title="Facebook" onclick="compartirFacebook()"><i id="facebook" class="bx bxl-facebook"></i></button>
+          <button title="Twitter" onclick="compartirTwitter()"><i id="twitter" class="bx bxl-twitter"></i></button>
+          <button title="Whatsapp" onclick="compartirWhatsapp()"><i id="whatsapp" class="bx bxl-whatsapp"></i></button>
+          <button title="Linked In" onclick="compartirLinkedIn()"><i id="linkedin" class="bx bxl-linkedin"></i></button>
+      </div>
 
       </div>
     </section><!-- End Portfolio Section -->
@@ -559,19 +564,19 @@
                 <p>P. de San LLorente 374, Cinco Saltos, Río Negro</p>
               </div>
 
-              <div class="email">
+              <div class="email" id="correo">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>gerardocalcagni@gmail.com</p>
               </div>
 
-              <div class="phone">
+              <div class="phone" id="telefono">
                 <i class="bi bi-phone"></i>
                 <h4>Llámame:</h4>
                 <p>+549 260 4586538</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.7560459151073!2d-68.06603129999999!3d-38.83804749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a4a0a2ad0399f%3A0x23a69151c2e9770!2sPerpetua%20del%20San%20Llorente%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses-419!2sar!4v1690520569041!5m2!1ses-419!2sar" width="600" height="450" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.7560459151073!2d-68.06603129999999!3d-38.83804749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a4a0a2ad0399f%3A0x23a69151c2e9770!2sPerpetua%20del%20San%20Llorente%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses-419!2sar!4v1690520569041!5m2!1ses-419!2sar" width="600" height="450" style="border:0; width: 100%; height: 290px; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
           </div>
@@ -615,6 +620,26 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+    <div class="container">
+
+      <div class="redes">
+        <a href="#" title="Facebook" onclick="compartirFacebook()"><i id="facebook" class="bx bxl-facebook"></i></a>
+        <a href="#" title="Twitter" onclick="compartirTwitter()"><i id="twitter" class="bx bxl-twitter"></i></a>
+        <a href="#" title="Whatsapp" onclick="compartirWhatsapp()"><i id="whatsapp" class="bx bxl-whatsapp"></i></a>
+        <a href="#" title="Linked In" onclick="compartirLinkedIn()"><i id="linkedin" class="bx bxl-linkedin"></i></a>
+      </div>      
+
+      <div class="copyright">
+        &copy; Copyright <strong><span>GerArt</span></strong>
+      </div>
+      <div class="credits">
+        Desarrollo por <a href="">SolidSnk86</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
