@@ -6,13 +6,17 @@ body {
   color: #272829;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #1a4585;
   text-decoration: none;
 }
 
 a:hover {
-  color: #119e53;
+  color: #a4d169;
   text-decoration: none;
 }
 
@@ -35,7 +39,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #1a4585;
+  background: #122f57;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -49,7 +53,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #119e53;
+  background: #a4d169;
   color: #fff;
 }
 
@@ -81,7 +85,7 @@ h6 {
   margin-top: 50px;
   margin-bottom: 30px;
   display: block;
-  width: 130px;
+  width: 160px;
   border: 0px solid #1a4585;
 }
 
@@ -117,8 +121,8 @@ h6 {
 }
 
 #header .profile .social-links a:hover {
-  box-shadow: 0 0 10px #18d26e, 0 0 40px #18d26e;
-  color: #18d26e;
+  box-shadow: 0 0 10px #7898c5, 0 0 40px #9db5d6;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -197,7 +201,7 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #18d26e;
+  color: #a4d169;
 }
 
 /* Mobile Navigation */
@@ -220,6 +224,11 @@ h6 {
   line-height: 0;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.mobile-nav-toggle:hover {
+  color: #a4d169;
+  box-shadow: 0 0 10px #a4d169;
 }
 
 .mobile-nav-active {
@@ -283,7 +292,8 @@ h6 {
 }
 
 #hero p span {
-  color: #FFF;
+  color: aliceblue;
+  text-shadow: 1px 3px 4px #212431;
   padding-bottom: 4px;
   letter-spacing: 1px;
 }
@@ -338,7 +348,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #18d26e;
+  background: #a4d169;
   bottom: 0;
   left: 0;
 }
@@ -374,7 +384,7 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #18d26e;
+  color: #a4d169;
   line-height: 0;
 }
 
@@ -397,7 +407,7 @@ section {
 .facts .count-box i {
   display: block;
   font-size: 44px;
-  color: #119e53;
+  color: #a4d169;
   float: left;
   line-height: 0;
 }
@@ -467,7 +477,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: #a4d169;
 }
 
 /*--------------------------------------------------------------
@@ -484,7 +494,7 @@ section {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #a4d169;
   position: relative;
 }
 
@@ -563,7 +573,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
+  color: #a4d169;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -653,7 +663,7 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid #0e2442;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
@@ -711,10 +721,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #18d26e;
+  background: #122f57;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #18d26e;
+  border: 1px solid #122f57;
 }
 
 .services .icon i {
@@ -728,7 +738,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #18d26e;
+  color: #122f57;
 }
 
 .services .title {
@@ -743,7 +753,7 @@ section {
 }
 
 .services .title a:hover {
-  color: #119e53;
+  color: #1f5297;
 }
 
 .services .description {
@@ -837,11 +847,12 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #122f57;
+  border: 1px solid #6f7180;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #119e53;
+  background-color: #173b6c;
+  box-shadow: 0 0 5px #a4d169, 0 0 10px #a4d169;
 }
 
 /*--------------------------------------------------------------
@@ -856,11 +867,12 @@ section {
   background: #fff;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #18d26e;
+  color: #1f5297;
   float: left;
   width: 44px;
   height: 44px;
@@ -911,14 +923,14 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #149ddd;
+  background: #a4d169;
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #149ddd;
+  background: #1f5297;
   color: #fff;
 }
 
@@ -927,7 +939,9 @@ section {
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
 }
+
 
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
@@ -944,7 +958,7 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: tomato;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -957,7 +971,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #a4d169;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -977,7 +991,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
+  border: 3px solid #a4d169;
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
 }
@@ -995,6 +1009,7 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
+  border-radius: 6px;
 }
 
 .contact .php-email-form input {
@@ -1006,16 +1021,18 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #149ddd;
+  background: #122f57;
   border: 0;
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #37b3ed;
+  box-shadow: 0 0 10px #a4d169, 0 0 40px #a4d169, 0 0 60px #a4d169;
+  filter: blur(0.03rem);
+  color: #a4d169;
 }
 
 @keyframes animate-loading {
@@ -1107,4 +1124,21 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+/* ----------> HR <---------- */ 
+
+.hr-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hr-container hr {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #666;
+  border: none;
+  margin: 0 10px;
 }
