@@ -1,10 +1,4 @@
-/**
-* Template Name: iPortfolio
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -260,3 +254,67 @@
   new PureCounter();
 
 })()
+
+/** ------> Contacts */
+
+document.getElementById('correo').onclick = function() {
+  window.open('mailto:gerardocalcagni@gmail.com');
+};
+
+document.getElementById('telefono').onclick = function() {
+  window.open('tel:+5492604586538');
+}
+
+/** -------> Social Media Links */
+document.getElementById('instagram').onclick = function() {
+  const instagramUrl = 'instagram://user?username=calcagnigerart';
+  const fallbackUrl = 'https://instagram.com/calcagnigerart?igshid=NTc4MTIwNjQ2YQ==';
+  const win = window.open(instagramUrl, '_blank');
+  if (!win || win.closed || typeof win.closed === 'undefined') {
+    window.location.href = fallbackUrl;
+  }
+};
+
+document.getElementById('facebook').onclick = function() {
+  window.open('https://www.facebook.com/');
+};
+
+document.getElementById('linkedIn').onclick = function() {
+  window.open('https://www.linkedin.com/');
+};
+
+/** -----> Get the fecha */
+const currentDateElement = document.getElementById('current-date');
+
+const currentDate = new Date();
+
+const options = { weekday: 'long', month: 'numeric', year: 'numeric' };
+const fullDate = currentDate.toLocaleDateString('es-ES', options);
+
+currentDateElement.textContent = fullDate;
+
+/** -----> Sharer Social-Media */
+function compartirFacebook() {
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
+}
+
+function compartirWhatsapp() {
+  var mensaje = "Mirá este portfolio de dibujos: " + window.location.href;
+  window.open('https://wa.me/?text=' + encodeURIComponent(mensaje));
+}
+
+function compartirTwitter() {
+  window.open('https://twitter.com/share?url=' + encodeURIComponent(window.location.href));
+}
+function compartirLinkedIn() {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`';
+  window.open(shareUrl, '_blank');
+}
+
+
+
+
+
+
