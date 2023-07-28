@@ -1118,10 +1118,11 @@ section {
   color: #eaebf0;
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 1199px) {
   #footer {
-    position: static;
-    width: auto;
+    position: relative;
+    width: 80%;
+    left: 300px;
     padding-right: 20px 15px;
   }
 }
