@@ -82,9 +82,9 @@
     onscroll(document, toggleBacktotop)
   }
 
-  /**
+  /**---------------------------------------------------------
    * Mobile nav toggle
-   */
+   -----------------------------------------------------------*/
     // Función para cerrar el menú de navegación móvil si se hace clic fuera de él
     function closeMobileNavOnClickOutside(event) {
       const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
