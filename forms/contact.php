@@ -1,33 +1,56 @@
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+<?php
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+// Recuperar los datos del formulario
+$nombre = $_POST['nombre'];
+$telefono = $_POST['telefono'];
+$correo = $_POST['correo'];
+$tema = $_POST['tema'];
+$mensaje = $_POST['mensaje'];
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+$destinatario = 'neotecs-dev@neotecs.tech';
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+// Crear el mensaje de confirmación
+$asunto = 'Confirmación de contacto';
+$mensaje_confirmacion = "Hola $nombre,\n\nGracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible.\n\nSaludos,\nEl equipo de NeoTecs.";
 
-  echo $contact->send();
+// Enviar el correo de confirmación
+$mail = new PHPMailer(true);
+$mail->isSMTP();
+$mail->SMTPDebug = SMTP::DEBUG_OFF;
+$mail->Host = 'smtp.hostinger.com';
+$mail->Port = 465;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->SMTPAuth = true;
+$mail->Username = 'correo-electrónico@tu-mail.com';
+$mail->Password = 'contraseña';
+$mail->setFrom('correo-electrónico@tu-mail.com', 'Nombre Apellido');
+$mail->addAddress($correo, $nombre);
+$mail->Subject = $asunto;
+$mail->Body = $mensaje_confirmacion;
+
+try {
+    $mail->send();
+
+    // Enviar una copia del mensaje de contacto a tu dirección de correo electrónico
+    $asunto_contacto = 'Mensaje de contacto';
+    $mensaje_contacto = "Has recibido un nuevo mensaje de contacto:\n\nNombre: $nombre\nTeléfono: $telefono\nCorreo electrónico: $correo\nTema: $tema\nMensaje: $mensaje";
+
+    $mail->clearAddresses();
+    $mail->addAddress($destinatario);
+    $mail->Subject = $asunto_contacto;
+    $mail->Body = $mensaje_contacto;
+
+    $mail->send();
+
+    echo 'Gracias por tu mensaje. Hemos enviado una confirmación a tu dirección de correo electrónico. Nos pondremos en contacto contigo pronto.';
+} catch (Exception $e) {
+    echo 'Hubo un error al enviar el correo. Por favor, intenta nuevamente más tarde.';
+}
 ?>
