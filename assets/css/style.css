@@ -707,8 +707,20 @@ section {
   padding: 0;
 }
 
+.redes-portfolio {
+  text-align: right;
+}
+
+.redes-portfolio p {
+  text-align: left;
+}
+
 .redes-portfolio a {
   font-size: 1.3em;
+}
+
+.venom-spiderman {
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1128,7 +1140,7 @@ section {
 @media (min-width: 1199px) {
   #footer {
     position: relative;
-    width: 80%;
+    width: auto;
     left: 300px;
     padding-right: 20px 15px;
   }
