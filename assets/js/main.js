@@ -85,12 +85,28 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
+    // Función para cerrar el menú de navegación móvil si se hace clic fuera de él
+    function closeMobileNavOnClickOutside(event) {
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const mobileNavMenu = document.querySelector('.mobile-nav');
+  
+      // Verificar si el clic ocurrió fuera del menú de navegación móvil y del botón de alternancia
+      if (!event.target.closest('.mobile-nav') && !event.target.closest('.mobile-nav-toggle')) {
+        document.body.classList.remove('mobile-nav-active');
+        mobileNavToggle.classList.remove('bi-x');
+        mobileNavToggle.classList.add('bi-list');
+      }
+    }
+  
+    // Agregar evento de clic al botón de alternancia del menú de navegación móvil
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function(e) {
+      document.body.classList.toggle('mobile-nav-active');
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x');
+    });
+  
+    // Agregar evento de clic al documento para cerrar el menú de navegación móvil en clics fuera de él
+    document.addEventListener('click', closeMobileNavOnClickOutside);
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
@@ -132,7 +148,7 @@
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
+      backDelay: 1000
     });
   }
 
@@ -313,8 +329,34 @@ function compartirLinkedIn() {
   window.open(shareUrl, '_blank');
 }
 
+/** ----------------------------------------------------------
+                 ------> IMAGE CARD <-------
+ -------------------------------------------------------------*/
 
+ const portfolioItems = document.querySelectorAll('.portfolio-wrap');
 
+  // Obtener el modal y la imagen dentro del modal
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const modalImage = document.getElementById('modal-image');
+
+  // Agregar un evento de clic a cada elemento con la clase 'portfolio-wrap'
+  portfolioItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Obtener la ruta de la imagen grande
+      const largeImageUrl = item.querySelector('img').src;
+
+      // Mostrar el modal y establecer la imagen grande en el modal
+      modalImage.src = largeImageUrl;
+      modalOverlay.style.display = 'block';
+    });
+  });
+
+  // Agregar un evento de clic para cerrar el modal cuando se hace clic fuera de la imagen
+  modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+      modalOverlay.style.display = 'none';
+    }
+  });
 
 
 
