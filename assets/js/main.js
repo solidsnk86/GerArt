@@ -107,6 +107,7 @@
   
     // Agregar evento de clic al documento para cerrar el menú de navegación móvil en clics fuera de él
     document.addEventListener('click', closeMobileNavOnClickOutside);
+
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
@@ -312,16 +313,17 @@ currentDateElement.textContent = fullDate;
 /** -----> Sharer Social-Media */
 function compartirFacebook() {
   window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href));
-}
+};
 
 function compartirWhatsapp() {
-  var mensaje = "Mirá este portfolio de dibujos: " + window.location.href;
+  var mensaje = "Mirá este excelente portfolio de dibujos: " + window.location.href;
   window.open('https://wa.me/?text=' + encodeURIComponent(mensaje));
-}
+};
 
 function compartirTwitter() {
   window.open('https://twitter.com/share?url=' + encodeURIComponent(window.location.href));
-}
+};
+
 function compartirLinkedIn() {
   var url = encodeURIComponent(window.location.href);
   var title = encodeURIComponent(document.title);
@@ -330,33 +332,31 @@ function compartirLinkedIn() {
 }
 
 /** ----------------------------------------------------------
-                 ------> IMAGE CARD <-------
+                  ------> IMAGE CARD <-------
  -------------------------------------------------------------*/
 
- const portfolioItems = document.querySelectorAll('.portfolio-wrap');
-
-  // Obtener el modal y la imagen dentro del modal
-  const modalOverlay = document.querySelector('.modal-overlay');
-  const modalImage = document.getElementById('modal-image');
-
-  // Agregar un evento de clic a cada elemento con la clase 'portfolio-wrap'
-  portfolioItems.forEach(item => {
-    item.addEventListener('click', () => {
-      // Obtener la ruta de la imagen grande
-      const largeImageUrl = item.querySelector('img').src;
-
-      // Mostrar el modal y establecer la imagen grande en el modal
-      modalImage.src = largeImageUrl;
-      modalOverlay.style.display = 'block';
-    });
-  });
-
-  // Agregar un evento de clic para cerrar el modal cuando se hace clic fuera de la imagen
-  modalOverlay.addEventListener('click', (event) => {
-    if (event.target === modalOverlay) {
-      modalOverlay.style.display = 'none';
-    }
-  });
-
+// Función para mostrar el modal con la imagen grande cuando se hace clic en un elemento portfolio-item
+   function showLargeImage(event) {
+     const modalImage = document.getElementById('modal-image');
+     const largeImageUrl = event.target.src;
+ 
+// Mostrar el modal y establecer la imagen grande en el modal
+     modalImage.src = largeImageUrl;
+     document.querySelector('.modal-overlay').style.display = 'block';
+   }
+ 
+// Agregar evento de clic a todos los elementos con la clase 'portfolio-item'
+   const portfolioItems = document.querySelectorAll('.portfolio-item');
+   portfolioItems.forEach(item => {
+     item.addEventListener('click', showLargeImage);
+   });
+ 
+// Agregar evento de clic para cerrar el modal cuando se hace clic fuera de la imagen
+   document.querySelector('.modal-overlay').addEventListener('click', (event) => {
+     if (event.target === event.currentTarget) {
+       document.querySelector('.modal-overlay').style.display = 'none';
+     }
+   });
+  
 
 
