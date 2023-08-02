@@ -83,7 +83,7 @@
   }
 
   /**---------------------------------------------------------
-   * Mobile nav toggle
+   * Mobile nav toggle [edited by solidsnk86]
    -----------------------------------------------------------*/
     // Función para cerrar el menú de navegación móvil si se hace clic fuera de él
     function closeMobileNavOnClickOutside(event) {
