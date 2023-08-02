@@ -2,7 +2,7 @@
 
 - Portfolio Web de Arte
 
-** Herramientas utilizadas:**
+**🔧 Herramientas utilizadas:**
 
 | Lenguaje | Descripción            |
 |----------|------------------------|
