@@ -1,3 +1,7 @@
 # GerArt
 
-- Portfolio de dibujos
+![Static Badge](https://img.shields.io/badge/Ger-Art-mediumlateblue)
+
+- Portfolio Web de Arte
+
+
