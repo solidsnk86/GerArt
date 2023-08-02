@@ -1,6 +1,6 @@
-# ![Static Badge](https://img.shields.io/badge/Ger-Art-mediumlateblue)
+# ![Static Badge](https://img.shields.io/badge/Ger-Art-gold)
 
-- Portfolio Web de Arte
+- Portfolio Web de Arte, éste desarrollo tiene como plantilla principal  ![Static Badge](https://img.shields.io/badge/Bootstrap-made-lightblue) la cuál he modificado para ésta web.
 
 **🔧 Herramientas utilizadas:**
 
