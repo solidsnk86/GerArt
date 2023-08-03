@@ -922,6 +922,7 @@ section {
 }
 
 .respuesta {
+  display: none;
   flex-direction: column;
   margin-left: calc(100px)
 }
