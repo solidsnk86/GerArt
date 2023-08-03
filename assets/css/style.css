@@ -270,7 +270,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .mobile-nav-toggle:hover {
   color: #a4d169;
-  box-shadow: 0 0 10px #a4d169;
 }
 
 .mobile-nav-active {
@@ -810,8 +809,8 @@ section {
 #comment-form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 20px;
+  width: 90%;
+  margin: 5%;
   margin-top: 50px;
 }
 
@@ -898,7 +897,7 @@ section {
 
 .acordion-content {
   display: none;
-  animation: acordionEffect 0.6s ease-in-out;
+  animation: acordionEffect 0.6s ease-in-out forwards;
 }
 
 #verMenos {
@@ -924,7 +923,25 @@ section {
 .respuesta {
   display: none;
   flex-direction: column;
-  margin-left: calc(100px)
+  margin-left: calc(100px);
+  margin-top: 5px;
+  animation: replyZone 0.6s forwards ease-in-out;
+}
+
+@keyframes replyZone {
+  0% {
+    opacity: 0;
+    translate: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    translate: scaleY(100%);
+  }
+}
+
+.respuesta img {
+  position: absolute;
+  left: calc(70px);
 }
 
 .respuesta textarea {
@@ -943,6 +960,20 @@ section {
 
 #enviar-respuesta:hover {
   background-color: #173b6c;
+}
+
+/*------------ Likes Contador ------------- */
+
+#contadorLikes {
+  position: absolute;
+  left: calc(150px);
+  top: calc(121px);
+  margin: 1px;
+  padding: 0 5px;
+  color: #0e2442;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.8em;
 }
 
 
