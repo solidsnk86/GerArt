@@ -481,4 +481,36 @@ function addComment(username, content) {
  
    // Cargar comentarios al cargar la página
    loadComments();
+ 
 
+const acordionContent = document.querySelector('.acordion-content');
+const verMas = document.getElementById('verMas');
+const verMenos = document.getElementById('verMenos');
+
+let isAcordionContentOpen = false;
+
+verMas.onclick = function() {
+  if (!isAcordionContentOpen) {
+    openAcordion();
+  } 
+};
+
+verMenos.onclick = function() {
+  if (isAcordionContentOpen) {
+    closeAcordion();
+  }
+};
+
+function openAcordion() {
+  acordionContent.style.display = 'block';
+  verMas.style.display = 'none';
+  verMenos.style.display = 'block';
+  isAcordionContentOpen = true;
+};
+
+function closeAcordion() {
+  acordionContent.style.display = '';
+  verMenos.style.display = 'none';
+  verMas.style.display = 'block';
+  isAcordionContentOpen = false;
+}
