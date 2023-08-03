@@ -721,7 +721,7 @@ section {
 @media (max-width:768px) {
   .content-redes {
     position: absolute;
-    right: 8px;
+    right: 10px;
   }
   .projects .redes p {
     font-size: 0.93em;
@@ -873,6 +873,23 @@ section {
   background-color: #f6f9ff;
 }
 
+.message-item .reply-like {
+  margin-left: 65px;
+}
+
+.message-item .like:hover {
+  color: tomato;
+}
+
+.message-item i {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.message-item i:hover {
+  color: #a4d169;
+}
+
 #verMas {
   text-align: center;
   cursor: pointer;
@@ -903,6 +920,30 @@ section {
     transition: 0.6s;
   }
 }
+
+.respuesta {
+  flex-direction: column;
+  margin-left: calc(100px)
+}
+
+.respuesta textarea {
+  width: 100%;
+}
+
+#enviar-respuesta {
+  cursor: pointer;
+  width: fit-content;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #0e2442;
+  color: #fff;
+  box-shadow: 1px 2px 3px #272829;
+}
+
+#enviar-respuesta:hover {
+  background-color: #173b6c;
+}
+
 
 /*--------------------------------------------------------------
 # Services
