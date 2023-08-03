@@ -162,7 +162,7 @@
     </section><!-- End Facts Section -->
 
    <!-- ======= Our Projects Section ======= -->
-   <section id="portfolio" class="projects">
+   <section id="projects" class="projects">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -507,9 +507,79 @@
 
         </div><!-- End Projects Container -->
 
+        <div class="redes">
+          <p>Compartir en las redes</p>
+          <div class="content-redes">
+          <a href="#" title="Facebook" onclick="compartirFacebook()"><i id="facebook" class="bx bxl-facebook"></i></a>
+          <a href="#" title="Twitter" onclick="compartirTwitter()"><i id="twitter" class="bx bxl-twitter"></i></a>
+          <a href="#" title="Whatsapp" onclick="compartirWhatsapp()"><i id="whatsapp" class="bx bxl-whatsapp"></i></a>
+          <a href="#" title="Linked In" onclick="compartirLinkedIn()"><i id="linkedin" class="bx bxl-linkedin"></i></a>
+        </div>
+        </div>
+
       </div>
 
-      <div class="compartir">
+      <div class="card comentarios">
+        <p>Agregar un comentario:</p>
+        <form id="comment-form">
+          <input type="text" id="username" placeholder="Nombre de usuario" required>
+          <textarea id="comment" placeholder="Tu comentario" required></textarea>
+          <button type="submit">Enviar comentario</button>
+        </form>
+      </div>
+      
+      <div class="hr-container">
+        <hr />
+        <h5>Comentarios</h5>
+        <hr />
+      </div>
+
+      <div class="card">
+      <div id="comments">
+        <ul id="comment-list">
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/testimonials/testimonials-7.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>Cristina Hudson</h4>
+                <p>Me encanta tu portfolio! Quiero aprender en el Taller de pintura al óleo para principiantes.</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <ul id="comment-list" class="acordion-down">
+        <li class="message-item">
+          <a href="#">
+            <img src="assets/img/testimonials/testimonials-8.jpg" alt="" class="rounded-circle">
+            <div>
+              <h4>Anna Nelson</h4>
+              <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+              <p>6 hrs. ago</p>
+            </div>
+          </a>
+        </li>
+        </ul>
+
+        <ul id="comment-list" class="acordion-down">
+          <li class="message-item">
+            <a href="#">
+              <img src="assets/img/testimonials/testimonials-5.jpg" alt="" class="rounded-circle">
+              <div>
+                <h4>David Muldon</h4>
+                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                <p>8 hrs. ago</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <p id="show-more">ver más</p>
+    </div>
+
+      <div class="fecha-actual">
         <li>Última actualización<div id="current-date"></div></li>
       </div>
 
@@ -788,7 +858,7 @@
     <div class="container">
 
       <div class="redes">
-        <p>Compartir en las redes</p>
+        <p>Compartir en las redes:</p>
         <a href="#" title="Facebook" onclick="compartirFacebook()"><i id="facebook" class="bx bxl-facebook"></i></a>
         <a href="#" title="Twitter" onclick="compartirTwitter()"><i id="twitter" class="bx bxl-twitter"></i></a>
         <a href="#" title="Whatsapp" onclick="compartirWhatsapp()"><i id="whatsapp" class="bx bxl-whatsapp"></i></a>
