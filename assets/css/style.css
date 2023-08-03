@@ -720,7 +720,11 @@ section {
 
 @media (max-width:768px) {
   .content-redes {
-    right: -5%;
+    position: absolute;
+    right: 8px;
+  }
+  .projects .redes p {
+    font-size: 0.93em;
   }
 }
 
@@ -763,8 +767,6 @@ section {
   left: calc(20px);
   top: calc(10px);
 }
-
-
 
 @media (min-width:1299px) {
   .comentarios {
@@ -871,15 +873,15 @@ section {
   background-color: #f6f9ff;
 }
 
-.card #verMas {
+#verMas {
   text-align: center;
   cursor: pointer;
   text-decoration: underline;
-  animation: acordionEffect 0.6s;
 }
 
 .acordion-content {
   display: none;
+  animation: acordionEffect 0.6s ease-in-out;
 }
 
 #verMenos {
@@ -891,12 +893,12 @@ section {
 
 @keyframes acordionEffect {
   0% {
-    transform: scaleY(0);
+    transform: scaleX(0);
     opacity: 0;
     transition: 0.6s;
   }
   100% {
-    transform: scaleY(100%);
+    transform: scaleX(100%);
     opacity: 1;
     transition: 0.6s;
   }
