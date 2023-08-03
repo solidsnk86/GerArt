@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -489,6 +488,7 @@ const verMenos = document.getElementById('verMenos');
 
 let isAcordionContentOpen = false;
 
+
 verMas.onclick = function() {
   if (!isAcordionContentOpen) {
     openAcordion();
@@ -513,4 +513,7 @@ function closeAcordion() {
   verMenos.style.display = 'none';
   verMas.style.display = 'block';
   isAcordionContentOpen = false;
-}
+};
+
+
+
