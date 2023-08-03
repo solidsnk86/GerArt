@@ -83,7 +83,7 @@
   }
 
   /**---------------------------------------------------------
-   * Mobile nav toggle [edited by solidsnk86]
+   * Mobile nav toggle
    -----------------------------------------------------------*/
     // Función para cerrar el menú de navegación móvil si se hace clic fuera de él
     function closeMobileNavOnClickOutside(event) {
@@ -433,6 +433,65 @@ new Swiper('.slides-2', {
     }
   }
 });
-  
+ 
+/** ----------------------------------------------------------
+                  ------> COMENTARIOS <-------
+ -------------------------------------------------------------*/
 
+const commentForm = document.getElementById("comment-form");
+const commentList = document.getElementById("comment-list");
+ 
+   // Función para cargar los comentarios desde el servidor
+   function loadComments() {
+     fetch("/api/comments")
+       .then((response) => response.json())
+       .then((data) => {
+         commentList.innerHTML = ""; // Limpiamos la lista antes de agregar los nuevos comentarios
+         data.forEach((comment) => {
+           const li = document.createElement("li");
+           li.innerHTML = `<strong>${comment.username}:</strong> ${comment.content}`;
+           commentList.appendChild(li);
+         });
+       })
+       .catch((error) => console.error("Error al cargar comentarios:", error));
+   }
+ 
+   // Función para enviar un nuevo comentario al servidor
+function addComment(username, content) {
+     fetch("/api/comments", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify({ username, content }),
+     })
+       .then(() => {
+         loadComments(); // Actualizamos los comentarios después de agregar uno nuevo
+       })
+       .catch((error) => console.error("Error al agregar comentario:", error));
+   }
+ 
+   commentForm.addEventListener("submit", (event) => {
+     event.preventDefault();
+     const username = document.getElementById("username").value;
+     const comment = document.getElementById("comment").value;
+     addComment(username, comment);
+     commentForm.reset();
+   });
+ 
+   // Cargar comentarios al cargar la página
+   loadComments();
+ 
+ // Carta -ShowMore
 
+ let isAcordionOpen = false;
+
+ menuBtn.onclick = function() {
+   if (!isAcordionOpen) {
+     openAcordion();
+   }
+ };
+ 
+ closeButton.onclick = function() {
+   closeAcordion();
+ };
