@@ -1,3 +1,4 @@
+
 (function() {
   "use strict";
 
@@ -515,5 +516,29 @@ function closeAcordion() {
   isAcordionContentOpen = false;
 };
 
+//** ------------- Responder comentario --------------- */
+
+const botonResponder = document.querySelector('.reply');
+const respueta = document.querySelector('.respuesta');
+
+let isRespuestaOpen = false;
+
+botonResponder.onclick = function() {
+  if (!isRespuestaOpen) {
+    responder();
+  } else {
+    closeResponder();
+  }
+};
+
+function responder() {
+  respueta.style.display = 'block';
+  isRespuestaOpen = true;
+};
+
+function closeResponder() {
+  respueta.style.display = 'none';
+  isRespuestaOpen = false;
+}
 
 
