@@ -871,15 +871,37 @@ section {
   background-color: #f6f9ff;
 }
 
-.card #show-more {
+.card #verMas {
   text-align: center;
   cursor: pointer;
   text-decoration: underline;
+  animation: acordionEffect 0.6s;
 }
 
-.acordion-down {
+.acordion-content {
   display: none;
 }
+
+#verMenos {
+  display: none;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@keyframes acordionEffect {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.6s;
+  }
+  100% {
+    transform: scaleY(100%);
+    opacity: 1;
+    transition: 0.6s;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
