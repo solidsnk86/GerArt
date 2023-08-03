@@ -1,6 +1,6 @@
 # ![Static Badge](https://img.shields.io/badge/Ger-Art-gold)
 
-- Portfolio Web de Arte, éste desarrollo tiene como plantilla principal
+- Portfolio Web de Arte, en éste desarrollo utilizo librerías de Bootstrap.
 - [![Static Badge](https://img.shields.io/badge/Bootstrap-made-blue)](https://bootstrapmade.com/)
 - La cuál he modificado para ésta web.
 
