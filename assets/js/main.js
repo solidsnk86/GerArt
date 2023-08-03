@@ -541,4 +541,25 @@ function closeResponder() {
   isRespuestaOpen = false;
 }
 
+//* ------------ Contador likes ----------------- */
 
+const contadorLikes = document.getElementById('contadorLikes');
+const botonLike = document.getElementById('botonLike');
+
+let likes = 0;
+
+if (localStorage.getItem('likes')) {
+  likes = parseInt(localStorage.getItem('likes'));
+}
+
+function actualizarContadorLikes() {
+  contadorLikes.textContent = likes.toString();
+  localStorage.setItem.apply('likes', likes.toString());
+}
+
+botonLike.onclick = function() {
+  likes++;
+  actualizarContadorLikes();
+}
+
+actualizarContadorLikes();
