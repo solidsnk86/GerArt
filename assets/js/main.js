@@ -481,17 +481,4 @@ function addComment(username, content) {
  
    // Cargar comentarios al cargar la página
    loadComments();
- 
- // Carta -ShowMore
 
- let isAcordionOpen = false;
-
- menuBtn.onclick = function() {
-   if (!isAcordionOpen) {
-     openAcordion();
-   }
- };
- 
- closeButton.onclick = function() {
-   closeAcordion();
- };
