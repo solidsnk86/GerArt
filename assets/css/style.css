@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb:hover {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: #fff;
+   background: #00000057;
   transition: all 0.6s ease-out;
 }
 
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #fff;
-  border-color: var(--color-primary) transparent var(--color-primary) transparent;
+  border-color: #1a4585 transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
