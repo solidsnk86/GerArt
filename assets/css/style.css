@@ -964,10 +964,10 @@ section {
 
 /*------------ Likes Contador ------------- */
 
-#contadorLikes {
+.contadorLikes {
   position: absolute;
   left: calc(150px);
-  top: calc(121px);
+  top: calc(140px);
   margin: 1px;
   padding: 0 5px;
   color: #0e2442;
@@ -1121,8 +1121,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #173b6c;
-  box-shadow: 0 0 5px #a4d169, 0 0 10px #a4d169;
+  background-color: #0e2442;
 }
 
 /*--------------------------------------------------------------
@@ -1300,8 +1299,6 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  box-shadow: 0 0 10px #a4d169, 0 0 40px #a4d169, 0 0 60px #a4d169;
-  filter: blur(0.03rem);
   color: #a4d169;
 }
 
