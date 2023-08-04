@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb:hover {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: #272829;
+  background: #fff;
   transition: all 0.6s ease-out;
 }
 
