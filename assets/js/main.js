@@ -1,7 +1,17 @@
-
 (function() {
   "use strict";
 
+
+   /**
+   * Preloader
+   */
+  const preloader = document.querySelector('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove();
+    });
+  }
+  
   /**
    * Easy selector helper function
    */
