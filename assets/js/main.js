@@ -582,7 +582,7 @@ fetch('https://solidsnk86.github.io/request-api/api/data')
     messageElement.textContent = data.message;
   })
   .catch(error => {
-    console.error('Error al obtener los datos:', error);
+    alert.error('Error al obtener los datos:', error);
     const messageElement = document.getElementById('message');
     messageElement.textContent = 'Error al obtener los datos de la API';
   });
