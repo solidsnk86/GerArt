@@ -573,3 +573,18 @@ botonLike.onclick = function() {
 }
 
 actualizarContadorLikes();
+
+//* API request GitHub page deployment---*/
+fetch('https://solidsnk86.github.io/request-api/app.js')
+  .then(response => response.json())
+  .then(data => {
+    const messageElement = document.getElementById('message');
+    messageElement.textContent = data.message;
+  })
+  .catch(error => {
+    console.error('Error al obtener los datos:', error);
+    const messageElement = document.getElementById('message');
+    messageElement.textContent = 'Error al obtener los datos de la API';
+  });
+
+
