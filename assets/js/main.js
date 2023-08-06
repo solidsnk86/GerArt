@@ -575,7 +575,7 @@ botonLike.onclick = function() {
 actualizarContadorLikes();
 
 //* API request GitHub page deployment---*/
-fetch('https://solidsnk86.github.io/request-api/app.js')
+fetch('https://solidsnk86.github.io/request-api/api/data')
   .then(response => response.json())
   .then(data => {
     const messageElement = document.getElementById('message');
